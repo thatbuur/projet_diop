@@ -15,7 +15,7 @@ if (isset($_POST['send'])) {
 
         extract($_POST);
 
-        // Gestion de l'upload de la photo
+        
         $photo = $_POST['photo_actuelle']; // Conserver la photo actuelle par défaut
         if (!empty($_FILES["photo"]["name"])) {
             $target_dir = "picture/";
