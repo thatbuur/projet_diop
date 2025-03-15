@@ -28,7 +28,7 @@ if (isset($_POST['send'])) {
             $mdp_hash = password_hash($mdp, PASSWORD_BCRYPT);
         }
 
-        // Requête SQL pour mettre à jour l'utilisateur
+        
         $sql = "UPDATE utilisateur 
                 SET prenom = '$prenom', 
                     nom = '$nom', 
