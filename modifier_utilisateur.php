@@ -16,14 +16,14 @@ if (isset($_POST['send'])) {
         extract($_POST);
 
         
-        $photo = $_POST['photo_actuelle']; // Conserver la photo actuelle par défaut
+        $photo = $_POST['photo_actuelle']; 
         if (!empty($_FILES["photo"]["name"])) {
             $target_dir = "picture/";
             $target_file = $target_dir . basename($_FILES["photo"]["name"]);
         }
 
         // Hachage du mot de passe si modifié
-        $mdp_hash = $_POST['mdp_actuel']; // Conserver le mot de passe actuel par défaut
+        $mdp_hash = $_POST['mdp_actuel']; 
         if (!empty($mdp)) {
             $mdp_hash = password_hash($mdp, PASSWORD_BCRYPT);
         }
