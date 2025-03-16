@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $mot_de_passe = $_POST['mot_de_passe'];
 
-    // Vérifier si l'email et le mot de passe sont corrects
+    
     $sql = "SELECT * FROM admin WHERE email = '$email' AND mdp = '$mot_de_passe'";
     $result = mysqli_query($conn, $sql);
     
