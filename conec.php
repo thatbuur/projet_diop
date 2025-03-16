@@ -15,8 +15,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result = mysqli_query($conn, $sql);
     
     if (mysqli_num_rows($result) > 0) {
-        $_SESSION['admin'] = $email; // On stocke l'admin en session
-        header("Location: show.php"); // Redirige vers la page admin
+        $_SESSION['admin'] = $email; // On stocke email de l'admin en session
+        header("Location: show.php"); 
         exit();
     } else {
         $message = "Identifiants incorrects.";
